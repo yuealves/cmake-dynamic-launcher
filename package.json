@@ -3,6 +3,10 @@
   "displayName": "cmake-dynamic-launcher",
   "description": "automatically change cmake lanuch target",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuealves/cmake-dynamic-launcher.git"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
