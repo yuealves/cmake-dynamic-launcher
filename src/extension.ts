@@ -88,6 +88,10 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.window.showInformationMessage(`Attempting to set and run CMake target: ${targetName}`);
 
 			try {
+				// First configure CMake to ensure new targets are recognized
+				vscode.window.showInformationMessage(`Configuring CMake...`);
+				await vscode.commands.executeCommand('cmake.configure');
+				
 				// Build the specified target
 				await vscode.commands.executeCommand('cmake.buildWithTarget', targetName);
 				vscode.window.showInformationMessage(`Built target: ${targetName}`);
